@@ -16,7 +16,9 @@ const skills = [
 
 const CarouselRow = ({items, reverse = false }) => {
   return (
-    <div className="overflow-hidden w-full">
+    <div className="relative overflow-hidden w-full">
+      <div className="pointer-events-none absolute top-0 left-0 h-full w-20 bg-gradient-to-r from-black via-black/60 to-transparent blur-md z-10" />
+      <div className="pointer-events-none absolute top-0 right-0 h-full w-20 bg-gradient-to-l from-black via-black/60 to-transparent blur-md z-10" />
       <div
         className={`flex gap-8 w-max animate-scroll ${
           reverse ? "animate-scroll-reverse" : ""
