@@ -14,14 +14,19 @@ const skills = [
   { name: "Capcut", src: "/capcut.png" },
 ];
 
-const Keahlian = () => {
+const CarouselRow = ({items, reverse = false }) => {
   return (
-    <section className="flex flex-col items-start justify-start bg-black text-white px-2 py-6">
-      <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {skills.map((skill, index) => (
+    <div className="overflow-hidden w-full">
+      <div
+        className={`flex gap-8 w-max animate-scroll ${
+          reverse ? "animate-scroll-reverse" : ""
+        }`}
+      >
+        {/* duplikasi supaya loop mulus */}
+        {[...items, ...items].map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center w-20 h-20 rounded-full bg-gray-500 shadow-md hover:scale-105 transition-transform"
+            className="flex flex-col items-center justify-center w-20 h-20 rounded-full bg-gray-500 shadow-md"
           >
             <Image
               src={skill.src}
@@ -33,6 +38,15 @@ const Keahlian = () => {
           </div>
         ))}
       </div>
+    </div>
+  );
+};
+
+const Keahlian = () => {
+  return (
+    <section className="flex flex-col items-start justify-start bg-black text-white px-2 py-6">
+      <CarouselRow items={skills} />
+      <CarouselRow items={skills} reverse />
     </section>
   );
 };
