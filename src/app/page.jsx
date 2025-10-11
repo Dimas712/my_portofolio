@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="md:ml-64 px-8 bg-black text-white">
+    <main className="md:ml-64 px-8 bg-black text-white overflow-x-hidden max-w-full">
       <section id="beranda" className="py-5">
         <h1
           className="text-2xl font-bold"
