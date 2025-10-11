@@ -11,32 +11,34 @@ import Portofolio from "../component/Portofolio/Portofolio";
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 800, // durasi default
-      once: true,    // animasi hanya jalan sekali
+      duration: 800, // durasi animasi default
+      once: true,    // animasi hanya dijalankan sekali
     });
   }, []);
 
   return (
-    <main className="md:ml-64 px-8 bg-black text-white overflow-x-hidden max-w-full">
-      <section id="beranda" className="py-5">
-        <h1
-          className="text-2xl font-bold"
-          data-aos="fade-down"
-          data-aos-duration="800"
-        >
-          Beranda
-        </h1>
-        <div data-aos="fade-up" data-aos-duration="800">
+    <main className="pt-8 px-6 md:px-12 text-white overflow-x-hidden max-w-full min-h-screen bg-cover bg-center bg-fixed relative" style={{ backgroundImage: "url('/bg.jpg')" }}>
+      {/* ===== Beranda ===== */}
+      <section id="beranda" className="py-10">
+
+        <div data-aos="fade-up" data-aos-duration="800" className="mb-10">
           <DataDiri />
         </div>
-        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="200"
+          className="mb-10"
+        >
           <Tentang />
         </div>
       </section>
 
-      <section id="portofolio" className="py-5">
+      {/* ===== Portofolio ===== */}
+      <section id="portofolio" className="py-10 border-t border-gray-700">
         <h1
-          className="text-2xl font-bold"
+          className="text-3xl font-bold mb-6"
           data-aos="fade-down"
           data-aos-duration="800"
         >

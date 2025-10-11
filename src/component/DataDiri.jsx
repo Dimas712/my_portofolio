@@ -7,7 +7,7 @@ import Image from 'next/image';
 const DataDiri = () => {
   return (
      <section
-      className="flex flex-col md:flex-row items-start justify-start bg-black text-white px-1 py-6"
+      className="flex flex-col md:flex-row items-start justify-start text-white px-1 py-6"
     >
       {/* Foto di kiri */}
       <div className="md:w-1/3 flex justify-start mb-2 md:mb-0">

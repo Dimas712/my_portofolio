@@ -3,7 +3,7 @@ import React from 'react'
 
 const Tentang = () => {
   return (
-    <section className="flex flex-col items-start justify-start bg-black text-white px-2 -mt-12">
+    <section className="flex flex-col items-start justify-start text-white px-2 -mt-12">
         <h1 className="text-lg font-bold">Tentang</h1>
         <p className="items-start justify-start"> 
             Saya lulusan Program Studi Sistem Informasi Universitas Singaperbangsa Karawang, memiliki keahlian

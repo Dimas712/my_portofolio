@@ -46,7 +46,7 @@ const CarouselRow = ({items, reverse = false }) => {
 
 const Keahlian = () => {
   return (
-    <section className="flex flex-col items-start justify-start bg-black text-white px-2 py-6">
+    <section className="flex flex-col items-start justify-start text-white px-2 py-6">
       <CarouselRow items={skills} />
       <CarouselRow items={skills} reverse />
     </section>

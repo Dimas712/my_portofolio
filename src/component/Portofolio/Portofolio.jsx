@@ -5,11 +5,11 @@ import React from "react";
 
 const Portofolio = () => {
   return (
-    <section className="flex flex-col items-center justify-center mt-8 bg-black text-white w-full space-y-12">
+    <section className="flex flex-col items-center justify-center mt-8 text-white w-full space-y-12">
       {/* Web Development */}
       <div className="w-full flex flex-col items-center">
         <h1 className="font-bold text-lg mb-4 text-center">Web Development</h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {websites.map((website, index) => (
             <div
               key={index}
