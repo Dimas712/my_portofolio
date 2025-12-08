@@ -24,7 +24,7 @@ const Portofolio = () => {
               />
               <p className="mt-3 text-sm text-center">{website.name}</p>
               <a
-              href={desain.link}
+              href={website.link}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 px-4 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700"
