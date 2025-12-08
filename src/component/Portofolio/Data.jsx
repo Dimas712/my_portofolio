@@ -1,7 +1,7 @@
 export const websites = [
-    { name: "Perpustakaan SMAN 1 Jasinga", src: "/perpustakaan.jpeg"},
-    { name: "Desa Digital", src: "/"},
-    { name: "Undangan Pernikahan Digital", src: "/undangan.jpg"},
+    { name: "Perpustakaan SMAN 1 Jasinga", src: "/perpustakaan.jpeg", link:"https://perpustakaansmanjas.vercel.app/"},
+    { name: "Desa Digital", src: "/", link:"https://desa-digital-dimasalipfaturrohim.vercel.app/"},
+    { name: "Undangan Pernikahan Digital", src: "/undangan.jpg", link:"https://hay-wedding.vercel.app/  "},
 ]
 
 export const desains = [
