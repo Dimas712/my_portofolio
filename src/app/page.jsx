@@ -11,43 +11,72 @@ import Portofolio from "../component/Portofolio/Portofolio";
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 800, // durasi animasi default
-      once: true,    // animasi hanya dijalankan sekali
+      duration: 800,
+      once: true,
     });
   }, []);
 
   return (
-    <main className="pt-8 px-6 md:px-12 text-white overflow-x-hidden max-w-full min-h-screen bg-cover bg-center bg-fixed relative" style={{ backgroundImage: "url('/bg.jpg')" }}>
-      {/* ===== Beranda ===== */}
-      <section id="beranda" className="py-10">
+    <main
+      className="
+        min-h-screen 
+        text-white 
+        px-6 md:px-16 
+        pt-16 
+        overflow-x-hidden 
+        bg-fixed bg-cover bg-center relative
+      "
+      style={{ backgroundImage: "url('/bg.jpg')" }}
+    >
+      {/* Overlay agar teks lebih terbaca */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
-        <div data-aos="fade-up" data-aos-duration="800" className="mb-10">
-          <DataDiri />
-        </div>
+      <div className="relative z-10">
+        {/* ===== Beranda ===== */}
+        <section id="beranda" className="py-14">
+          <div
+            data-aos="fade-up"
+            className="mb-12 flex flex-col items-center md:items-start"
+          >
+            <DataDiri />
+          </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-delay="200"
-          className="mb-10"
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="mb-16 max-w-3xl mx-auto"
+          >
+            <Tentang />
+          </div>
+        </section>
+
+        {/* ===== Portofolio ===== */}
+        <section
+          id="portofolio"
+          className="py-14 mt-10 border-t border-white/10"
         >
-          <Tentang />
-        </div>
-      </section>
+          <h1
+            data-aos="fade-down"
+            className="
+              text-4xl 
+              font-extrabold 
+              tracking-wide 
+              mb-10 
+              text-center md:text-left
+              drop-shadow-lg
+            "
+          >
+            Portofolio
+          </h1>
 
-      {/* ===== Portofolio ===== */}
-      <section id="portofolio" className="py-10 border-t border-gray-700">
-        <h1
-          className="text-3xl font-bold mb-6"
-          data-aos="fade-down"
-          data-aos-duration="800"
-        >
-          Portofolio
-        </h1>
-        <div data-aos="fade-up" data-aos-duration="1000">
-          <Portofolio />
-        </div>
-      </section>
+          <div
+            data-aos="fade-up"
+            className="p-4 rounded-xl bg-white/5 backdrop-blur-md shadow-xl"
+          >
+            <Portofolio />
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
